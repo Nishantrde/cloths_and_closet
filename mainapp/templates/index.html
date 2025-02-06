@@ -4,29 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloths and Closet</title>
+  <!-- Google Fonts for a modern, attractive look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Basic styling without a gradient background */
+    /* Apply the modern font across the page */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: #fff; /* Set a plain background color, you can change it if desired */
+      /* Gradient: dark at top right, bright at bottom left */
+      background: linear-gradient(to bottom left, #a18875, #f0e5dc);
     }
 
-    /* Logo styling with an entrance animation */
+    /* Logo styling with entrance animation and hover effect */
     .logo {
       width: 200px;
       height: auto;
       margin-bottom: 20px;
       opacity: 0;
       animation: logoEntrance 2s ease forwards;
-      /* Add a subtle drop shadow for depth */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
     }
 
     @keyframes logoEntrance {
@@ -40,16 +47,50 @@
       }
     }
 
-    /* Tagline styling with a fade-in animation */
-    .tagline {
-      font-size: 24px;
-      color: #333;
-      opacity: 0; /* Start hidden */
-      animation: fadeIn 2s forwards; /* Animate once and hold the final state */
+    /* Text container for ESTD and 2022 */
+    .text-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;  /* Matches the logo width */
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      animation-delay: 2s; /* Appear after the logo animation */
     }
 
-    /* Keyframes for a smooth fade-in transition */
-    @keyframes fadeIn {
+    .text-container span {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: #333;
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Tagline styling with fade-in animation */
+    .tagline {
+      font-size: 28px;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 2.5s; /* Appear slightly after the text container */
+    }
+
+    @keyframes fadeInUp {
       0% {
         opacity: 0;
         transform: translateY(20px);
@@ -62,10 +103,16 @@
   </style>
 </head>
 <body>
-  <!-- Logo image with entrance animation -->
-  <img src="https://res.cloudinary.com/dbrvducfo/image/upload/v1738295349/location-marker_x4l8wx.png" alt="Brand Logo" class="logo" />
+  <!-- Logo image with entrance animation and hover effect -->
+  <img src="https://res.cloudinary.com/dbrvducfo/image/upload/v1738864312/WhatsApp_Image_2025-02-06_at_10.45.23_PM-removebg-preview_lovqeo.png" alt="Brand Logo" class="logo" />
+
+  <!-- Text container for ESTD and 2022 placed directly below the logo -->
+  <div class="text-container">
+    <span>ESTD</span>
+    <span>2025</span>
+  </div>
 
   <!-- Tagline with fade-in animation -->
-  <div class="tagline">Innovate Your World</div>
+  <div class="tagline">Shape Your Style, Define Your Space</div>
 </body>
 </html>
