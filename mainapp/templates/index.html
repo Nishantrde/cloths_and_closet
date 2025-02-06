@@ -27,6 +27,7 @@
       justify-content: space-between;
       align-items: center;
       width: 320px;  /* Adjusted width to accommodate spans and logo */
+      margin-top: -50px; /* Shift the container upward */
       margin-bottom: 10px;
       opacity: 0;
       animation: slideUp 1s ease forwards;
@@ -39,7 +40,7 @@
       font-size: 13px;
       letter-spacing: 1px;
       color: #333;
-      margin-top: 80px; /* Moves the span a little down */
+      /* Removed individual margin-top to let the container's shift take effect */
     }
 
     @keyframes slideUp {
@@ -89,6 +90,7 @@
       opacity: 0;
       animation: fadeInUp 1s ease forwards;
       animation-delay: .9s; /* Appear slightly after the text container */
+      text-align: center;
     }
 
     @keyframes fadeInUp {
