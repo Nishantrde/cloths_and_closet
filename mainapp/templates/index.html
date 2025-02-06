@@ -21,6 +21,38 @@
       background: linear-gradient(to bottom left, #a18875, #f0e5dc);
     }
 
+    /* Text container for ESTD, Logo, and the year */
+    .text-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 320px;  /* Adjusted width to accommodate spans and logo */
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      animation-delay: .8s; /* Appear after the logo animation */
+    }
+
+    .text-container span {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: #333;
+      margin-top: 80px; /* Moves the span a little down */
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
     /* Logo styling with entrance animation and hover effect */
     .logo {
       width: 200px;
@@ -47,37 +79,6 @@
       }
     }
 
-    /* Text container for ESTD and 2022 */
-    .text-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 200px;  /* Matches the logo width */
-      margin-bottom: 10px;
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 2s; /* Appear after the logo animation */
-    }
-
-    .text-container span {
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 16px;
-      letter-spacing: 1px;
-      color: #333;
-    }
-
-    @keyframes slideUp {
-      0% {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
     /* Tagline styling with fade-in animation */
     .tagline {
       font-size: 28px;
@@ -87,7 +88,7 @@
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
       opacity: 0;
       animation: fadeInUp 1s ease forwards;
-      animation-delay: 2.5s; /* Appear slightly after the text container */
+      animation-delay: .9s; /* Appear slightly after the text container */
     }
 
     @keyframes fadeInUp {
@@ -103,12 +104,10 @@
   </style>
 </head>
 <body>
-  <!-- Logo image with entrance animation and hover effect -->
-  <img src="https://res.cloudinary.com/dbrvducfo/image/upload/v1738864312/WhatsApp_Image_2025-02-06_at_10.45.23_PM-removebg-preview_lovqeo.png" alt="Brand Logo" class="logo" />
-
-  <!-- Text container for ESTD and 2022 placed directly below the logo -->
+  <!-- Text container for ESTD, Logo, and the year -->
   <div class="text-container">
     <span>ESTD</span>
+    <img src="https://res.cloudinary.com/dbrvducfo/image/upload/v1738864312/WhatsApp_Image_2025-02-06_at_10.45.23_PM-removebg-preview_lovqeo.png" alt="Brand Logo" class="logo" />
     <span>2025</span>
   </div>
 
