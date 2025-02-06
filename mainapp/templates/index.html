@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloths and Closet</title>
+  <style>
+    /* Basic styling without a gradient background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fff; /* Set a plain background color, you can change it if desired */
+    }
+
+    /* Logo styling with an entrance animation */
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: logoEntrance 2s ease forwards;
+      /* Add a subtle drop shadow for depth */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes logoEntrance {
+      0% {
+        transform: scale(0.8) rotate(-10deg);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    /* Tagline styling with a fade-in animation */
+    .tagline {
+      font-size: 24px;
+      color: #333;
+      opacity: 0; /* Start hidden */
+      animation: fadeIn 2s forwards; /* Animate once and hold the final state */
+    }
+
+    /* Keyframes for a smooth fade-in transition */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo image with entrance animation -->
+  <img src="https://res.cloudinary.com/dbrvducfo/image/upload/v1738295349/location-marker_x4l8wx.png" alt="Brand Logo" class="logo" />
+
+  <!-- Tagline with fade-in animation -->
+  <div class="tagline">Innovate Your World</div>
+</body>
+</html>
